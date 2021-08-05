@@ -1,0 +1,8 @@
+site_name: SecretManagement.PasswordState
+repo_url: https://example.com
+theme:
+    name: readthedocs
+
+nav:
+    - Home: index.md
+    - About: about_SecretManagement.PasswordState.help.md
