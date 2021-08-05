@@ -2,12 +2,6 @@
     PSDependOptions = @{
         Target = 'CurrentUser'
     }
-    'Pester' = @{
-        Version = '5.1.1'
-        Parameters = @{
-            SkipPublisherCheck = $true
-        }
-    }
     'psake' = @{
         Version = '4.9.0'
     }
