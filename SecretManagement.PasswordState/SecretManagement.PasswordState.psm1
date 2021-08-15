@@ -1,13 +1,21 @@
-# Dot source public/private functions
-$classes = @(Get-ChildItem -Path (Join-Path -Path $PSScriptRoot -ChildPath 'Classes/*.ps1') -Recurse -ErrorAction Stop)
-$public  = @(Get-ChildItem -Path (Join-Path -Path $PSScriptRoot -ChildPath 'Public/*.ps1')  -Recurse -ErrorAction Stop)
-$private = @(Get-ChildItem -Path (Join-Path -Path $PSScriptRoot -ChildPath 'Private/*.ps1') -Recurse -ErrorAction Stop)
-foreach ($import in @($classes + $public + $private)) {
-    try {
-        . $import.FullName
-    } catch {
-        throw "Unable to dot source [$($import.FullName)]"
-    }
-}
+<#
+.SYNOPSIS
+Powershell Script module vault extension
 
-Export-ModuleMember -Function $public.Basename
+.DESCRIPTION
+The functions in this module are the implementation to interop
+with powershell secret management.
+
+.NOTES
+ModuleName    : SecretManagement.PasswordState
+Created by    : David Tawater
+Date Coded    : 2021-07-29
+
+.LINK
+https://github.com/taalmahret/SecretManagement.PasswordState
+
+.LINK
+https://github.com/PowerShell/SecretManagement
+#>
+
+
