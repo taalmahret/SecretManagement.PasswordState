@@ -8,7 +8,7 @@
 
 ## Overview
 
-PowerShell SecretManagement PasswordState module provides a streamlined way of accessing secrets stored in the https://www.clickstudios.com.au/ password management system PasswordState.
+PowerShell SecretManagement PasswordState module provides a streamlined way of accessing secrets stored in the [ClickStudios](https://www.clickstudios.com.au/) password management system PasswordState.
 
 ## Installation
 

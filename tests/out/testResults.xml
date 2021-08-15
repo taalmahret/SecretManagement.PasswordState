@@ -1,0 +1,715 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="nunit_schema_2.5.xsd" name="Pester" total="99" errors="0" failures="86" not-run="0" inconclusive="0" ignored="0" skipped="3" invalid="0" date="2021-08-11" time="21:26:14">
+  <environment machine-name="USNV-L00008" user="dtawater" clr-version="Unknown" cwd="C:\Projects\Powershell\Modules\SecretManagement.PasswordState\tests" platform="Microsoft Windows 10 Pro|C:\WINDOWS|\Device\Harddisk0\Partition4" user-domain="OFFICE" os-version="10.0.19041" nunit-version="2.5.8.0" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite type="TestFixture" name="Pester" executed="True" result="Failure" success="False" time="2.7646" asserts="0" description="Pester">
+    <results>
+      <test-suite type="TestFixture" name="C:\Projects\Powershell\Modules\SecretManagement.PasswordState\tests\Manifest.tests.ps1" executed="True" result="Failure" success="False" time="0.3895" asserts="0" description="C:\Projects\Powershell\Modules\SecretManagement.PasswordState\tests\Manifest.tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Module manifest" executed="True" result="Failure" success="False" time="0.2068" asserts="0" description="Module manifest">
+            <results>
+              <test-suite type="TestFixture" name="Module manifest.Validation" executed="True" result="Failure" success="False" time="0.1357" asserts="0" description="Module manifest.Validation">
+                <results>
+                  <test-case description="Has a valid manifest" name="Module manifest.Validation.Has a valid manifest" time="0.0111" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Has a valid name in the manifest" name="Module manifest.Validation.Has a valid name in the manifest" time="0.0101" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Has a valid root module" name="Module manifest.Validation.Has a valid root module" time="0.0122" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>Expected 'SecretManagement.PasswordState.psm1', but got $null.
+at $manifestData.RootModule | Should -Be "$($moduleName).psm1", C:\Projects\Powershell\Modules\SecretManagement.PasswordState\tests\Manifest.tests.ps1:36</message>
+                      <stack-trace>at &lt;ScriptBlock&gt;, C:\Projects\Powershell\Modules\SecretManagement.PasswordState\tests\Manifest.tests.ps1:36</stack-trace>
+                    </failure>
+                  </test-case>
+                  <test-case description="Has a valid version in the manifest" name="Module manifest.Validation.Has a valid version in the manifest" time="0.0044" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Has a valid description" name="Module manifest.Validation.Has a valid description" time="0.0039" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Has a valid author" name="Module manifest.Validation.Has a valid author" time="0.0058" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Has a valid guid" name="Module manifest.Validation.Has a valid guid" time="0.0107" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Has a valid copyright" name="Module manifest.Validation.Has a valid copyright" time="0.0053" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Has a valid version in the changelog" name="Module manifest.Validation.Has a valid version in the changelog" time="0.0053" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Changelog and manifest versions are the same" name="Module manifest.Validation.Changelog and manifest versions are the same" time="0.0028" asserts="0" success="False" result="Ignored" executed="False" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+          <test-suite type="TestFixture" name="Git tagging" executed="True" result="Ignored" success="True" time="0.2862" asserts="0" description="Git tagging">
+            <results>
+              <test-case description="Is tagged with a valid version" name="Git tagging.Is tagged with a valid version" time="0.0061" asserts="0" success="False" result="Ignored" executed="False" />
+              <test-case description="Matches manifest version" name="Git tagging.Matches manifest version" time="0.0025" asserts="0" success="False" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\Projects\Powershell\Modules\SecretManagement.PasswordState\tests\Meta.tests.ps1" executed="True" result="Success" success="True" time="1.4428" asserts="0" description="C:\Projects\Powershell\Modules\SecretManagement.PasswordState\tests\Meta.tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Text files formatting" executed="True" result="Success" success="True" time="0.2125" asserts="0" description="Text files formatting">
+            <results>
+              <test-suite type="TestFixture" name="Text files formatting.File encoding" executed="True" result="Success" success="True" time="0.0778" asserts="0" description="Text files formatting.File encoding">
+                <results>
+                  <test-case description="No text file uses Unicode/UTF-16 encoding" name="Text files formatting.File encoding.No text file uses Unicode/UTF-16 encoding" time="0.0126" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Text files formatting.Indentations" executed="True" result="Success" success="True" time="0.1499" asserts="0" description="Text files formatting.Indentations">
+                <results>
+                  <test-case description="No text file use tabs for indentations" name="Text files formatting.Indentations.No text file use tabs for indentations" time="0.0071" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\Projects\Powershell\Modules\SecretManagement.PasswordState\tests\SecretManagement.PasswordState.Extension\tests\Get-Secret.Tests.ps1" executed="True" result="Failure" success="False" time="0.1489" asserts="0" description="C:\Projects\Powershell\Modules\SecretManagement.PasswordState\tests\SecretManagement.PasswordState.Extension\tests\Get-Secret.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Get-Secret" executed="True" result="Failure" success="False" time="0.0753" asserts="0" description="Get-Secret">
+            <results>
+              <test-suite type="TestFixture" name="Get-Secret.Function Parameter Validation" executed="True" result="Failure" success="False" time="0" asserts="0" description="Get-Secret.Function Parameter Validation">
+                <results>
+                  <test-case description="has one parameter set" name="Get-Secret.Function Parameter Validation.has one parameter set" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                  <test-suite type="ParameterizedTest" name="Get-Secret.Function Parameter Validation.has a parameter &quot;&lt;Name&gt;&quot;" executed="True" result="Failure" success="False" time="0" asserts="0" description="has a parameter &quot;&lt;Name&gt;&quot;">
+                    <results>
+                      <test-case description="has a parameter &quot;&lt;Name&gt;&quot;" name="Get-Secret.Function Parameter Validation.has a parameter &quot;&lt;Name&gt;&quot;(&quot;Name&quot;)" time="0" asserts="0" success="False" result="Failure" executed="True">
+                        <failure>
+                          <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                          <stack-trace />
+                        </failure>
+                      </test-case>
+                      <test-case description="has a parameter &quot;&lt;Name&gt;&quot;" name="Get-Secret.Function Parameter Validation.has a parameter &quot;&lt;Name&gt;&quot;(&quot;VaultName&quot;)" time="0" asserts="0" success="False" result="Failure" executed="True">
+                        <failure>
+                          <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                          <stack-trace />
+                        </failure>
+                      </test-case>
+                      <test-case description="has a parameter &quot;&lt;Name&gt;&quot;" name="Get-Secret.Function Parameter Validation.has a parameter &quot;&lt;Name&gt;&quot;(&quot;AdditionalParameters&quot;)" time="0" asserts="0" success="False" result="Failure" executed="True">
+                        <failure>
+                          <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                          <stack-trace />
+                        </failure>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                  <test-suite type="ParameterizedTest" name="Get-Secret.Function Parameter Validation.has the mandatory value of parameter &quot;&lt;Name&gt;&quot; set to &quot;&lt;Mandatory&gt;&quot;" executed="True" result="Failure" success="False" time="0" asserts="0" description="has the mandatory value of parameter &quot;&lt;Name&gt;&quot; set to &quot;&lt;Mandatory&gt;&quot;">
+                    <results>
+                      <test-case description="has the mandatory value of parameter &quot;&lt;Name&gt;&quot; set to &quot;&lt;Mandatory&gt;&quot;" name="Get-Secret.Function Parameter Validation.has the mandatory value of parameter &quot;&lt;Name&gt;&quot; set to &quot;&lt;Mandatory&gt;&quot;(&quot;Name&quot;,False)" time="0" asserts="0" success="False" result="Failure" executed="True">
+                        <failure>
+                          <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                          <stack-trace />
+                        </failure>
+                      </test-case>
+                      <test-case description="has the mandatory value of parameter &quot;&lt;Name&gt;&quot; set to &quot;&lt;Mandatory&gt;&quot;" name="Get-Secret.Function Parameter Validation.has the mandatory value of parameter &quot;&lt;Name&gt;&quot; set to &quot;&lt;Mandatory&gt;&quot;(&quot;VaultName&quot;,False)" time="0" asserts="0" success="False" result="Failure" executed="True">
+                        <failure>
+                          <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                          <stack-trace />
+                        </failure>
+                      </test-case>
+                      <test-case description="has the mandatory value of parameter &quot;&lt;Name&gt;&quot; set to &quot;&lt;Mandatory&gt;&quot;" name="Get-Secret.Function Parameter Validation.has the mandatory value of parameter &quot;&lt;Name&gt;&quot; set to &quot;&lt;Mandatory&gt;&quot;(&quot;AdditionalParameters&quot;,False)" time="0" asserts="0" success="False" result="Failure" executed="True">
+                        <failure>
+                          <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                          <stack-trace />
+                        </failure>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                  <test-suite type="ParameterizedTest" name="Get-Secret.Function Parameter Validation.has parameter &lt;Name&gt; of type &lt;Type&gt;" executed="True" result="Failure" success="False" time="0" asserts="0" description="has parameter &lt;Name&gt; of type &lt;Type&gt;">
+                    <results>
+                      <test-case description="has parameter &lt;Name&gt; of type &lt;Type&gt;" name="Get-Secret.Function Parameter Validation.has parameter &lt;Name&gt; of type &lt;Type&gt;(&quot;string&quot;,&quot;Name&quot;)" time="0" asserts="0" success="False" result="Failure" executed="True">
+                        <failure>
+                          <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                          <stack-trace />
+                        </failure>
+                      </test-case>
+                      <test-case description="has parameter &lt;Name&gt; of type &lt;Type&gt;" name="Get-Secret.Function Parameter Validation.has parameter &lt;Name&gt; of type &lt;Type&gt;(&quot;string&quot;,&quot;VaultName&quot;)" time="0" asserts="0" success="False" result="Failure" executed="True">
+                        <failure>
+                          <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                          <stack-trace />
+                        </failure>
+                      </test-case>
+                      <test-case description="has parameter &lt;Name&gt; of type &lt;Type&gt;" name="Get-Secret.Function Parameter Validation.has parameter &lt;Name&gt; of type &lt;Type&gt;(&quot;hashtable&quot;,&quot;AdditionalParameters&quot;)" time="0" asserts="0" success="False" result="Failure" executed="True">
+                        <failure>
+                          <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                          <stack-trace />
+                        </failure>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Get-Secret.Get Secret information from MasterPassword protected KeePass" executed="True" result="Failure" success="False" time="0" asserts="0" description="Get-Secret.Get Secret information from MasterPassword protected KeePass">
+                <results>
+                  <test-case description="should throw when multiple secrets are returned" name="Get-Secret.Get Secret information from MasterPassword protected KeePass.should throw when multiple secrets are returned" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                  <test-case description="should return nothing when entry is not found in the KeePass DB" name="Get-Secret.Get Secret information from MasterPassword protected KeePass.should return nothing when entry is not found in the KeePass DB" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                  <test-suite type="ParameterizedTest" name="Get-Secret.Get Secret information from MasterPassword protected KeePass.should return a &lt;PSType&gt; for entry &lt;SecretName&gt;" executed="True" result="Failure" success="False" time="0" asserts="0" description="should return a &lt;PSType&gt; for entry &lt;SecretName&gt;">
+                    <results>
+                      <test-case description="should return a &lt;PSType&gt; for entry &lt;SecretName&gt;" name="Get-Secret.Get Secret information from MasterPassword protected KeePass.should return a &lt;PSType&gt; for entry &lt;SecretName&gt;(&quot;System.Management.Automation.PSCredential&quot;,&quot;New Entry 1&quot;)" time="0" asserts="0" success="False" result="Failure" executed="True">
+                        <failure>
+                          <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                          <stack-trace />
+                        </failure>
+                      </test-case>
+                      <test-case description="should return a &lt;PSType&gt; for entry &lt;SecretName&gt;" name="Get-Secret.Get Secret information from MasterPassword protected KeePass.should return a &lt;PSType&gt; for entry &lt;SecretName&gt;(&quot;System.Management.Automation.PSCredential&quot;,&quot;New Entry 2&quot;)" time="0" asserts="0" success="False" result="Failure" executed="True">
+                        <failure>
+                          <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                          <stack-trace />
+                        </failure>
+                      </test-case>
+                      <test-case description="should return a &lt;PSType&gt; for entry &lt;SecretName&gt;" name="Get-Secret.Get Secret information from MasterPassword protected KeePass.should return a &lt;PSType&gt; for entry &lt;SecretName&gt;(&quot;System.Security.SecureString&quot;,&quot;No UserName&quot;)" time="0" asserts="0" success="False" result="Failure" executed="True">
+                        <failure>
+                          <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                          <stack-trace />
+                        </failure>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                  <test-suite type="ParameterizedTest" name="Get-Secret.Get Secret information from MasterPassword protected KeePass.should return &lt;username&gt; for &lt;SecretName&gt;" executed="True" result="Failure" success="False" time="0" asserts="0" description="should return &lt;username&gt; for &lt;SecretName&gt;">
+                    <results>
+                      <test-case description="should return &lt;username&gt; for &lt;SecretName&gt;" name="Get-Secret.Get Secret information from MasterPassword protected KeePass.should return &lt;username&gt; for &lt;SecretName&gt;(&quot;myusername 1&quot;,&quot;New Entry 1&quot;)" time="0" asserts="0" success="False" result="Failure" executed="True">
+                        <failure>
+                          <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                          <stack-trace />
+                        </failure>
+                      </test-case>
+                      <test-case description="should return &lt;username&gt; for &lt;SecretName&gt;" name="Get-Secret.Get Secret information from MasterPassword protected KeePass.should return &lt;username&gt; for &lt;SecretName&gt;(&quot;Some Administrator account&quot;,&quot;New Entry 2&quot;)" time="0" asserts="0" success="False" result="Failure" executed="True">
+                        <failure>
+                          <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                          <stack-trace />
+                        </failure>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Get-Secret.Get Secret information from KeyFile protected KeePass" executed="True" result="Failure" success="False" time="0" asserts="0" description="Get-Secret.Get Secret information from KeyFile protected KeePass">
+                <results>
+                  <test-case description="should throw when multiple secrets are returned" name="Get-Secret.Get Secret information from KeyFile protected KeePass.should throw when multiple secrets are returned" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                  <test-case description="should return nothing when entry is not found in the KeePass DB" name="Get-Secret.Get Secret information from KeyFile protected KeePass.should return nothing when entry is not found in the KeePass DB" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                  <test-suite type="ParameterizedTest" name="Get-Secret.Get Secret information from KeyFile protected KeePass.should return a &lt;PSType&gt; for entry &lt;SecretName&gt;" executed="True" result="Failure" success="False" time="0" asserts="0" description="should return a &lt;PSType&gt; for entry &lt;SecretName&gt;">
+                    <results>
+                      <test-case description="should return a &lt;PSType&gt; for entry &lt;SecretName&gt;" name="Get-Secret.Get Secret information from KeyFile protected KeePass.should return a &lt;PSType&gt; for entry &lt;SecretName&gt;(&quot;System.Management.Automation.PSCredential&quot;,&quot;New Entry 1&quot;)" time="0" asserts="0" success="False" result="Failure" executed="True">
+                        <failure>
+                          <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                          <stack-trace />
+                        </failure>
+                      </test-case>
+                      <test-case description="should return a &lt;PSType&gt; for entry &lt;SecretName&gt;" name="Get-Secret.Get Secret information from KeyFile protected KeePass.should return a &lt;PSType&gt; for entry &lt;SecretName&gt;(&quot;System.Management.Automation.PSCredential&quot;,&quot;New Entry 2&quot;)" time="0" asserts="0" success="False" result="Failure" executed="True">
+                        <failure>
+                          <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                          <stack-trace />
+                        </failure>
+                      </test-case>
+                      <test-case description="should return a &lt;PSType&gt; for entry &lt;SecretName&gt;" name="Get-Secret.Get Secret information from KeyFile protected KeePass.should return a &lt;PSType&gt; for entry &lt;SecretName&gt;(&quot;System.Security.SecureString&quot;,&quot;No UserName&quot;)" time="0" asserts="0" success="False" result="Failure" executed="True">
+                        <failure>
+                          <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                          <stack-trace />
+                        </failure>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                  <test-suite type="ParameterizedTest" name="Get-Secret.Get Secret information from KeyFile protected KeePass.should return &lt;username&gt; for &lt;SecretName&gt;" executed="True" result="Failure" success="False" time="0" asserts="0" description="should return &lt;username&gt; for &lt;SecretName&gt;">
+                    <results>
+                      <test-case description="should return &lt;username&gt; for &lt;SecretName&gt;" name="Get-Secret.Get Secret information from KeyFile protected KeePass.should return &lt;username&gt; for &lt;SecretName&gt;(&quot;myusername 1&quot;,&quot;New Entry 1&quot;)" time="0" asserts="0" success="False" result="Failure" executed="True">
+                        <failure>
+                          <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                          <stack-trace />
+                        </failure>
+                      </test-case>
+                      <test-case description="should return &lt;username&gt; for &lt;SecretName&gt;" name="Get-Secret.Get Secret information from KeyFile protected KeePass.should return &lt;username&gt; for &lt;SecretName&gt;(&quot;Some Administrator account&quot;,&quot;New Entry 2&quot;)" time="0" asserts="0" success="False" result="Failure" executed="True">
+                        <failure>
+                          <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                          <stack-trace />
+                        </failure>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Get-Secret.Get Secret information from MasterPassword and KeyFile protected KeePass" executed="True" result="Failure" success="False" time="0" asserts="0" description="Get-Secret.Get Secret information from MasterPassword and KeyFile protected KeePass">
+                <results>
+                  <test-case description="should throw when multiple secrets are returned" name="Get-Secret.Get Secret information from MasterPassword and KeyFile protected KeePass.should throw when multiple secrets are returned" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                  <test-case description="should return nothing when entry is not found in the KeePass DB" name="Get-Secret.Get Secret information from MasterPassword and KeyFile protected KeePass.should return nothing when entry is not found in the KeePass DB" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                  <test-suite type="ParameterizedTest" name="Get-Secret.Get Secret information from MasterPassword and KeyFile protected KeePass.should return a &lt;PSType&gt; for entry &lt;SecretName&gt;" executed="True" result="Failure" success="False" time="0" asserts="0" description="should return a &lt;PSType&gt; for entry &lt;SecretName&gt;">
+                    <results>
+                      <test-case description="should return a &lt;PSType&gt; for entry &lt;SecretName&gt;" name="Get-Secret.Get Secret information from MasterPassword and KeyFile protected KeePass.should return a &lt;PSType&gt; for entry &lt;SecretName&gt;(&quot;System.Management.Automation.PSCredential&quot;,&quot;New Entry 1&quot;)" time="0" asserts="0" success="False" result="Failure" executed="True">
+                        <failure>
+                          <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                          <stack-trace />
+                        </failure>
+                      </test-case>
+                      <test-case description="should return a &lt;PSType&gt; for entry &lt;SecretName&gt;" name="Get-Secret.Get Secret information from MasterPassword and KeyFile protected KeePass.should return a &lt;PSType&gt; for entry &lt;SecretName&gt;(&quot;System.Management.Automation.PSCredential&quot;,&quot;New Entry 2&quot;)" time="0" asserts="0" success="False" result="Failure" executed="True">
+                        <failure>
+                          <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                          <stack-trace />
+                        </failure>
+                      </test-case>
+                      <test-case description="should return a &lt;PSType&gt; for entry &lt;SecretName&gt;" name="Get-Secret.Get Secret information from MasterPassword and KeyFile protected KeePass.should return a &lt;PSType&gt; for entry &lt;SecretName&gt;(&quot;System.Security.SecureString&quot;,&quot;No UserName&quot;)" time="0" asserts="0" success="False" result="Failure" executed="True">
+                        <failure>
+                          <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                          <stack-trace />
+                        </failure>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                  <test-suite type="ParameterizedTest" name="Get-Secret.Get Secret information from MasterPassword and KeyFile protected KeePass.should return &lt;username&gt; for &lt;SecretName&gt;" executed="True" result="Failure" success="False" time="0" asserts="0" description="should return &lt;username&gt; for &lt;SecretName&gt;">
+                    <results>
+                      <test-case description="should return &lt;username&gt; for &lt;SecretName&gt;" name="Get-Secret.Get Secret information from MasterPassword and KeyFile protected KeePass.should return &lt;username&gt; for &lt;SecretName&gt;(&quot;myusername 1&quot;,&quot;New Entry 1&quot;)" time="0" asserts="0" success="False" result="Failure" executed="True">
+                        <failure>
+                          <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                          <stack-trace />
+                        </failure>
+                      </test-case>
+                      <test-case description="should return &lt;username&gt; for &lt;SecretName&gt;" name="Get-Secret.Get Secret information from MasterPassword and KeyFile protected KeePass.should return &lt;username&gt; for &lt;SecretName&gt;(&quot;Some Administrator account&quot;,&quot;New Entry 2&quot;)" time="0" asserts="0" success="False" result="Failure" executed="True">
+                        <failure>
+                          <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                          <stack-trace />
+                        </failure>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\Projects\Powershell\Modules\SecretManagement.PasswordState\tests\SecretManagement.PasswordState.Extension\tests\Register-KeePassSecretVault.Tests.ps1" executed="True" result="Failure" success="False" time="0.1551" asserts="0" description="C:\Projects\Powershell\Modules\SecretManagement.PasswordState\tests\SecretManagement.PasswordState.Extension\tests\Register-KeePassSecretVault.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Register-KeepassSecretVault" executed="True" result="Failure" success="False" time="0.0798" asserts="0" description="Register-KeepassSecretVault">
+            <results>
+              <test-case description="Registers a Vault" name="Register-KeepassSecretVault.Registers a Vault" time="0" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                  <stack-trace />
+                </failure>
+              </test-case>
+              <test-case description="Fails if bad path specified" name="Register-KeepassSecretVault.Fails if bad path specified" time="0" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                  <stack-trace />
+                </failure>
+              </test-case>
+              <test-case description="Fails if no auth method specified" name="Register-KeepassSecretVault.Fails if no auth method specified" time="0" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                  <stack-trace />
+                </failure>
+              </test-case>
+              <test-case description="Creates a new vault if Create is specified" name="Register-KeepassSecretVault.Creates a new vault if Create is specified" time="0" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                  <stack-trace />
+                </failure>
+              </test-case>
+              <test-case description="Doesnt Clobber an existing vault if Create is specified" name="Register-KeepassSecretVault.Doesnt Clobber an existing vault if Create is specified" time="0" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                  <stack-trace />
+                </failure>
+              </test-case>
+              <test-case description="Doesnt Clobber an existing keyfile if Create is specified" name="Register-KeepassSecretVault.Doesnt Clobber an existing keyfile if Create is specified" time="0" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                  <stack-trace />
+                </failure>
+              </test-case>
+              <test-case description="Uses full titles if showfulltitle is specified" name="Register-KeepassSecretVault.Uses full titles if showfulltitle is specified" time="0" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                  <stack-trace />
+                </failure>
+              </test-case>
+              <test-case description="Succeeds with bad path but SkipValidate specified" name="Register-KeepassSecretVault.Succeeds with bad path but SkipValidate specified" time="0" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                  <stack-trace />
+                </failure>
+              </test-case>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\Projects\Powershell\Modules\SecretManagement.PasswordState\tests\SecretManagement.PasswordState.Extension\tests\Remove-Secret.Tests.ps1" executed="True" result="Failure" success="False" time="0.1442" asserts="0" description="C:\Projects\Powershell\Modules\SecretManagement.PasswordState\tests\SecretManagement.PasswordState.Extension\tests\Remove-Secret.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Remove-Secret" executed="True" result="Failure" success="False" time="0.0742" asserts="0" description="Remove-Secret">
+            <results>
+              <test-case description="Fails if name not specified" name="Remove-Secret.Fails if name not specified" time="0" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                  <stack-trace />
+                </failure>
+              </test-case>
+              <test-case description="Removes predefined secret" name="Remove-Secret.Removes predefined secret" time="0" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                  <stack-trace />
+                </failure>
+              </test-case>
+              <test-case description="Fails on removing already removed secret" name="Remove-Secret.Fails on removing already removed secret" time="0" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                  <stack-trace />
+                </failure>
+              </test-case>
+              <test-case description="Fails on duplicate secrets" name="Remove-Secret.Fails on duplicate secrets" time="0" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                  <stack-trace />
+                </failure>
+              </test-case>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\Projects\Powershell\Modules\SecretManagement.PasswordState\tests\SecretManagement.PasswordState.Extension\tests\Test-SecretVault.Tests.ps1" executed="True" result="Failure" success="False" time="0.2228" asserts="0" description="C:\Projects\Powershell\Modules\SecretManagement.PasswordState\tests\SecretManagement.PasswordState.Extension\tests\Test-SecretVault.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Test-SecretVault" executed="True" result="Failure" success="False" time="0.0794" asserts="0" description="Test-SecretVault">
+            <results>
+              <test-suite type="TestFixture" name="Test-SecretVault.Function Parameter Validation" executed="True" result="Failure" success="False" time="0" asserts="0" description="Test-SecretVault.Function Parameter Validation">
+                <results>
+                  <test-case description="has one parameter set" name="Test-SecretVault.Function Parameter Validation.has one parameter set" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                  <test-suite type="ParameterizedTest" name="Test-SecretVault.Function Parameter Validation.has a parameter &quot;&lt;Name&gt;&quot;" executed="True" result="Failure" success="False" time="0" asserts="0" description="has a parameter &quot;&lt;Name&gt;&quot;">
+                    <results>
+                      <test-case description="has a parameter &quot;&lt;Name&gt;&quot;" name="Test-SecretVault.Function Parameter Validation.has a parameter &quot;&lt;Name&gt;&quot;(&quot;VaultName&quot;)" time="0" asserts="0" success="False" result="Failure" executed="True">
+                        <failure>
+                          <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                          <stack-trace />
+                        </failure>
+                      </test-case>
+                      <test-case description="has a parameter &quot;&lt;Name&gt;&quot;" name="Test-SecretVault.Function Parameter Validation.has a parameter &quot;&lt;Name&gt;&quot;(&quot;AdditionalParameters&quot;)" time="0" asserts="0" success="False" result="Failure" executed="True">
+                        <failure>
+                          <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                          <stack-trace />
+                        </failure>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                  <test-suite type="ParameterizedTest" name="Test-SecretVault.Function Parameter Validation.has the mandatory value of parameter &quot;&lt;Name&gt;&quot; set to &quot;&lt;Mandatory&gt;&quot;" executed="True" result="Failure" success="False" time="0" asserts="0" description="has the mandatory value of parameter &quot;&lt;Name&gt;&quot; set to &quot;&lt;Mandatory&gt;&quot;">
+                    <results>
+                      <test-case description="has the mandatory value of parameter &quot;&lt;Name&gt;&quot; set to &quot;&lt;Mandatory&gt;&quot;" name="Test-SecretVault.Function Parameter Validation.has the mandatory value of parameter &quot;&lt;Name&gt;&quot; set to &quot;&lt;Mandatory&gt;&quot;(&quot;VaultName&quot;,True)" time="0" asserts="0" success="False" result="Failure" executed="True">
+                        <failure>
+                          <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                          <stack-trace />
+                        </failure>
+                      </test-case>
+                      <test-case description="has the mandatory value of parameter &quot;&lt;Name&gt;&quot; set to &quot;&lt;Mandatory&gt;&quot;" name="Test-SecretVault.Function Parameter Validation.has the mandatory value of parameter &quot;&lt;Name&gt;&quot; set to &quot;&lt;Mandatory&gt;&quot;(&quot;AdditionalParameters&quot;,False)" time="0" asserts="0" success="False" result="Failure" executed="True">
+                        <failure>
+                          <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                          <stack-trace />
+                        </failure>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                  <test-suite type="ParameterizedTest" name="Test-SecretVault.Function Parameter Validation.has parameter &lt;Name&gt; of type &lt;Type&gt;" executed="True" result="Failure" success="False" time="0" asserts="0" description="has parameter &lt;Name&gt; of type &lt;Type&gt;">
+                    <results>
+                      <test-case description="has parameter &lt;Name&gt; of type &lt;Type&gt;" name="Test-SecretVault.Function Parameter Validation.has parameter &lt;Name&gt; of type &lt;Type&gt;(&quot;string&quot;,&quot;VaultName&quot;)" time="0" asserts="0" success="False" result="Failure" executed="True">
+                        <failure>
+                          <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                          <stack-trace />
+                        </failure>
+                      </test-case>
+                      <test-case description="has parameter &lt;Name&gt; of type &lt;Type&gt;" name="Test-SecretVault.Function Parameter Validation.has parameter &lt;Name&gt; of type &lt;Type&gt;(&quot;hashtable&quot;,&quot;AdditionalParameters&quot;)" time="0" asserts="0" success="False" result="Failure" executed="True">
+                        <failure>
+                          <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                          <stack-trace />
+                        </failure>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Test-SecretVault.Validating with correct MasterPassword" executed="True" result="Failure" success="False" time="0" asserts="0" description="Test-SecretVault.Validating with correct MasterPassword">
+                <results>
+                  <test-case description="should not have a vault variable by default" name="Test-SecretVault.Validating with correct MasterPassword.should not have a vault variable by default" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                  <test-case description="should request a credential on the first pass" name="Test-SecretVault.Validating with correct MasterPassword.should request a credential on the first pass" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                  <test-case description="Should not request a credential on the second pass" name="Test-SecretVault.Validating with correct MasterPassword.Should not request a credential on the second pass" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                  <test-case description="should have a Vault variable upon unlock" name="Test-SecretVault.Validating with correct MasterPassword.should have a Vault variable upon unlock" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                  <test-case description="should return true" name="Test-SecretVault.Validating with correct MasterPassword.should return true" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Test-SecretVault.Validating with incorrect MasterPassword" executed="True" result="Failure" success="False" time="0" asserts="0" description="Test-SecretVault.Validating with incorrect MasterPassword">
+                <results>
+                  <test-case description="should not have a vault variable by default" name="Test-SecretVault.Validating with incorrect MasterPassword.should not have a vault variable by default" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                  <test-case description="Detects Invalid Composite Key and does not set a vault variable" name="Test-SecretVault.Validating with incorrect MasterPassword.Detects Invalid Composite Key and does not set a vault variable" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Test-SecretVault.Validating with Path and correct UseMasterPassword" executed="True" result="Failure" success="False" time="0" asserts="0" description="Test-SecretVault.Validating with Path and correct UseMasterPassword">
+                <results>
+                  <test-case description="should not have a vault variable by default" name="Test-SecretVault.Validating with Path and correct UseMasterPassword.should not have a vault variable by default" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                  <test-case description="should request a credential on the first pass" name="Test-SecretVault.Validating with Path and correct UseMasterPassword.should request a credential on the first pass" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                  <test-case description="Should not request a credential on the second pass" name="Test-SecretVault.Validating with Path and correct UseMasterPassword.Should not request a credential on the second pass" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                  <test-case description="should have a Vault variable upon unlock" name="Test-SecretVault.Validating with Path and correct UseMasterPassword.should have a Vault variable upon unlock" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                  <test-case description="should return true" name="Test-SecretVault.Validating with Path and correct UseMasterPassword.should return true" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Test-SecretVault.Validating with path and incorrect MasterPassword" executed="True" result="Failure" success="False" time="0" asserts="0" description="Test-SecretVault.Validating with path and incorrect MasterPassword">
+                <results>
+                  <test-case description="should not have a vault variable by default" name="Test-SecretVault.Validating with path and incorrect MasterPassword.should not have a vault variable by default" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                  <test-case description="Detects Invalid Composite Key and does not set a vault variable" name="Test-SecretVault.Validating with path and incorrect MasterPassword.Detects Invalid Composite Key and does not set a vault variable" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Test-SecretVault.Validating with correct Keyfile" executed="True" result="Failure" success="False" time="0" asserts="0" description="Test-SecretVault.Validating with correct Keyfile">
+                <results>
+                  <test-case description="should not have a vault variable by default" name="Test-SecretVault.Validating with correct Keyfile.should not have a vault variable by default" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                  <test-case description="Should not request a credential" name="Test-SecretVault.Validating with correct Keyfile.Should not request a credential" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                  <test-case description="should have a Vault variable upon unlock" name="Test-SecretVault.Validating with correct Keyfile.should have a Vault variable upon unlock" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                  <test-case description="should return true" name="Test-SecretVault.Validating with correct Keyfile.should return true" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Test-SecretVault.Validating with incorrect Keyfile" executed="True" result="Failure" success="False" time="0" asserts="0" description="Test-SecretVault.Validating with incorrect Keyfile">
+                <results>
+                  <test-case description="should not have a vault variable by default" name="Test-SecretVault.Validating with incorrect Keyfile.should not have a vault variable by default" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                  <test-case description="Detects Invalid Composite Key and does not set a vault variable" name="Test-SecretVault.Validating with incorrect Keyfile.Detects Invalid Composite Key and does not set a vault variable" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Test-SecretVault.Validating with correct Keyfile v2" executed="True" result="Failure" success="False" time="0" asserts="0" description="Test-SecretVault.Validating with correct Keyfile v2">
+                <results>
+                  <test-case description="should not have a vault variable by default" name="Test-SecretVault.Validating with correct Keyfile v2.should not have a vault variable by default" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                  <test-case description="Should not request a credential" name="Test-SecretVault.Validating with correct Keyfile v2.Should not request a credential" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                  <test-case description="should have a Vault variable upon unlock" name="Test-SecretVault.Validating with correct Keyfile v2.should have a Vault variable upon unlock" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                  <test-case description="should return true" name="Test-SecretVault.Validating with correct Keyfile v2.should return true" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Test-SecretVault.Validating with correct Keyfile and correct master password" executed="True" result="Failure" success="False" time="0" asserts="0" description="Test-SecretVault.Validating with correct Keyfile and correct master password">
+                <results>
+                  <test-case description="should not have a vault variable by default" name="Test-SecretVault.Validating with correct Keyfile and correct master password.should not have a vault variable by default" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                  <test-case description="should request a credential on the first pass" name="Test-SecretVault.Validating with correct Keyfile and correct master password.should request a credential on the first pass" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                  <test-case description="Should not request a credential on the second pass" name="Test-SecretVault.Validating with correct Keyfile and correct master password.Should not request a credential on the second pass" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                  <test-case description="should have a Vault variable upon unlock" name="Test-SecretVault.Validating with correct Keyfile and correct master password.should have a Vault variable upon unlock" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                  <test-case description="should return true" name="Test-SecretVault.Validating with correct Keyfile and correct master password.should return true" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Test-SecretVault.Validating with correct Keyfile and incorrect master password" executed="True" result="Failure" success="False" time="0" asserts="0" description="Test-SecretVault.Validating with correct Keyfile and incorrect master password">
+                <results>
+                  <test-case description="should not have a vault variable by default" name="Test-SecretVault.Validating with correct Keyfile and incorrect master password.should not have a vault variable by default" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                  <test-case description="Detects Invalid Composite Key and does not set a vault variable" name="Test-SecretVault.Validating with correct Keyfile and incorrect master password.Detects Invalid Composite Key and does not set a vault variable" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Test-SecretVault.Validating with incorrect Keyfile and correct master password" executed="True" result="Failure" success="False" time="0" asserts="0" description="Test-SecretVault.Validating with incorrect Keyfile and correct master password">
+                <results>
+                  <test-case description="should not have a vault variable by default" name="Test-SecretVault.Validating with incorrect Keyfile and correct master password.should not have a vault variable by default" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                  <test-case description="Detects Invalid Composite Key and does not set a vault variable" name="Test-SecretVault.Validating with incorrect Keyfile and correct master password.Detects Invalid Composite Key and does not set a vault variable" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Test-SecretVault.Validating with incorrect Keyfile and incorrect master password" executed="True" result="Failure" success="False" time="0" asserts="0" description="Test-SecretVault.Validating with incorrect Keyfile and incorrect master password">
+                <results>
+                  <test-case description="should not have a vault variable by default" name="Test-SecretVault.Validating with incorrect Keyfile and incorrect master password.should not have a vault variable by default" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                  <test-case description="Detects Invalid Composite Key and does not set a vault variable" name="Test-SecretVault.Validating with incorrect Keyfile and incorrect master password.Detects Invalid Composite Key and does not set a vault variable" time="0" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>This test should run but it did not. Most likely a setup in some parent block failed.</message>
+                      <stack-trace />
+                    </failure>
+                  </test-case>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
