@@ -46,5 +46,4 @@ finally {
     Invoke-Build BuildSessionCleanup
     $null = Remove-Module InvokeBuild
     Write-BuildOutput -Detail "...Done" -RightJustify -ColorRightSide DarkGreen
-
 }
