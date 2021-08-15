@@ -2,22 +2,16 @@
     PSDependOptions = @{
         Target = 'CurrentUser'
     }
-    'Pester' = @{
-        Version = '5.1.1'
-        Parameters = @{
-            SkipPublisherCheck = $true
-        }
+    'PlatyPS' = @{
+        Version = '0.14.2'
     }
-    'psake' = @{
-        Version = '4.9.0'
-    }
-    'BuildHelpers' = @{
-        Version = '2.0.16'
-    }
-    'PowerShellBuild' = @{
-        Version = '0.6.1'
+    'InvokeBuild' = @{
+        Version = '5.8.1'
     }
     'PSScriptAnalyzer' = @{
         Version = '1.19.1'
+    }
+    'ChangelogManagement' = @{
+        Version = '2.1.4'
     }
 }

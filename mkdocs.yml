@@ -1,5 +1,7 @@
 site_name: SecretManagement.PasswordState
 repo_url: https://example.com
+remote_branch: gh-pages
+remote_name: SecretManagement.PasswordStateGitHub
 theme:
     name: readthedocs
 
