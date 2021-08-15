@@ -1,2 +1,7 @@
-# Don't check in the Output dir
-Output/
+# Don't check-in these locations
+site/
+.release/
+BuildOutput/
+.temp/
+.psake/
+gitfix.sh
