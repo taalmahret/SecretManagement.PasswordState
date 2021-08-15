@@ -5,3 +5,4 @@ BuildOutput/
 .temp/
 .psake/
 gitfix.sh
+
