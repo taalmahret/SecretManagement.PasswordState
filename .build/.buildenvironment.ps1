@@ -275,4 +275,4 @@ class BuildEnvironment {
 
 
 # A terrible rumbling begins in the depths of the deep...Global ONLY for testing please.
-$Global:BuildEnvironment = [BuildEnvironment]::New($ProjectPath, $BuildToolPath, $ModuleWebsite)
+$Global:BuildEnvironment = [BuildEnvironment]::New($ProjectPath, $BuildToolPath, $ModuleWebsite, $ModuleRemoteRepo)
